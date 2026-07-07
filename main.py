@@ -56,7 +56,6 @@ print("\n--- Live Demonstration ---")
 print("1. Uncontrolled Trajectory (No CBF):")
 raw_output = generate_text(prompt_embeds)
 print(f"Prompt: '{prompt_text}' ->{raw_output}")
-
 print("\n2. CBF-Controlled Trajectory:")
 optimized_embeds = torch.cat([prefix_tensor.detach(), prompt_embeds], dim=1)
 safe_output = generate_text(optimized_embeds)
